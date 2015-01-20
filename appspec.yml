@@ -24,6 +24,9 @@ os: linux
 # If you are not copying any files to the instance, then remove the
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
+files:
+  - source: code-deploy/
+    destination: /home/ubuntu/code-deploy
 # For deployments to Amazon Linux and Ubuntu Server 
 #   Amazon EC2 instances,
 #   you can specify a "permissions" 
@@ -40,7 +43,7 @@ os: linux
 # If you are not running any commands on the instance, then remove 
 #   the "hooks" section altogether. A blank or incomplete "hooks" section
 #   may cause associated deployments to fail.
-
+hooks:
 # For each deployment lifecycle event, specify multiple "location" entries 
 #   if you want to run multiple scripts during that event.
 # You can specify "timeout" as the number of seconds to wait until failing the deployment 
