@@ -5,14 +5,11 @@
 # For help completing this file, see the "AppSpec File Reference" in the  
 #   "AWS CodeDeploy User Guide" at
 #   http://docs.aws.amazon.com/codedeploy/latest/userguide/app-spec-ref.html
-version: 0.0
+version: 0.1
 os: linux
 hooks:
   BeforeInstall
     - location: scripts/BeforeInstall.sh
-      runas: ubuntu
     - location: scripts/BeforeInstallAgain.sh
-      runas: ubuntu
-
   AfterInstall
     - location: scripts/AfterInstall.sh
